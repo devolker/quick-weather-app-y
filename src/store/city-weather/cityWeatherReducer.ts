@@ -9,7 +9,7 @@ export interface CityWeatherState {
 }
 
 const initialState: CityWeatherState = {
-  cityWeatherData: { temp: undefined },
+  cityWeatherData: { main: { temp: undefined } },
 };
 
 export const cityWeatherReducer = (

@@ -10,17 +10,15 @@ import { CityWeatherData } from "../../model/cityWeather";
 const API_KEY = "ad59de4eaf25a9c7fe74060a7bfb3244";
 
 export const fetchCityWeatherData = async (location: string) => {
-  console.log("jkshdkjashkd");
   const response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`
   );
-  return await response.json();
+  return response;
 };
 
 export function* getCityWeather({
   payload: { location },
 }: CityWeatherGetAction) {
-  console.log("function* getCityWeather");
   try {
     const response = yield retry(3, 200, fetchCityWeatherData, location);
     if (response.status === 200) {

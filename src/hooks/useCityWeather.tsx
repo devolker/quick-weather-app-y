@@ -9,11 +9,9 @@ export const useCityWeather: UseCityWeather = (location: string) => {
   const dispatch = useDispatch();
 
   const temp = useSelector<StoreState, number | undefined>(
-    (state) => state.cityWeather.cityWeatherData.temp
+    (state) => state.cityWeather.cityWeatherData.main.temp
   );
-
   useEffect(() => {
-    console.log("dispatch");
     dispatch(cityWeatherGetAction(location));
   }, [location, dispatch]);
 

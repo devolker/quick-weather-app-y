@@ -1,3 +1,3 @@
 export interface CityWeatherData {
-  temp?: number;
+  main: { temp?: number };
 }
