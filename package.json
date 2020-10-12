@@ -48,6 +48,7 @@
     "moment-timezone/moment": "2.18.1"
   },
   "devDependencies": {
+    "cypress": "^5.3.0",
     "react-test-renderer": "^16.13.1"
   }
 }
