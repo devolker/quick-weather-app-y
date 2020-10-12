@@ -1,26 +1,28 @@
-.App {
+.root {
   text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.header {
   background-color: #282c34;
-  min-height: 80px;
-  display: flex;
-  flex-direction: column;
+  // min-height: 80px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 8px;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.link {
+  color: white;
 }
 
 @keyframes App-logo-spin {

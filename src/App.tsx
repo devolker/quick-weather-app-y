@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import styles from "./App.module.scss";
 import { Link, Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
 import CityWeather from "./pages/CityWeather";
@@ -7,17 +7,15 @@ import { Paths } from "./constants/routes";
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.root}>
       <Router>
-        <header className="App-header">
-          <ul>
-            <li>
-              <Link to={Paths.HOME}>Home</Link>
-            </li>
-            <li>
-              <Link to={Paths.CITY_WEATHER}>City weather</Link>
-            </li>
-          </ul>
+        <header className={styles.header}>
+          <Link to={Paths.HOME} className={styles.link}>
+            Home
+          </Link>
+          <Link to={Paths.CITY_WEATHER} className={styles.link}>
+            City weather
+          </Link>
         </header>
         <Switch>
           <Route exact path={Paths.HOME}>

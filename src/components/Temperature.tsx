@@ -7,7 +7,7 @@ interface TemperatureProps {
 
 const Temperature = ({ temp }: TemperatureProps) => {
   if (temp) {
-    return <p>{kelvinToCelsius(temp)}</p>;
+    return <p>Celsius: {kelvinToCelsius(temp)}</p>;
   }
   return null;
 };
