@@ -1,22 +1,16 @@
 import React from "react";
 import styles from "./App.module.scss";
-import { Link, Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "./pages/Home";
 import CityWeather from "./pages/CityWeather";
 import { Paths } from "./constants/routes";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <div className={styles.root}>
       <Router>
-        <header className={styles.header}>
-          <Link to={Paths.HOME} className={styles.link}>
-            Home
-          </Link>
-          <Link to={Paths.CITY_WEATHER} className={styles.link}>
-            City weather
-          </Link>
-        </header>
+        <Header />
         <Switch>
           <Route exact path={Paths.HOME}>
             <Home />

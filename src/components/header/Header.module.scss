@@ -1,0 +1,15 @@
+.root {
+    background-color: #282c34;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.link {
+    color: white;
+}

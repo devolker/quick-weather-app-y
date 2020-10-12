@@ -8,23 +8,6 @@
   }
 }
 
-.header {
-  background-color: #282c34;
-  // min-height: 80px;
-  padding: 16px;
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 8px;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.link {
-  color: white;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
