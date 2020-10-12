@@ -11,12 +11,12 @@ const CityWeather = () => {
       title="Delft weather"
       description="Shows time and temperature"
     >
-      <Now />
+      <Now id="nowDate" />
       <br />
       {typeof temp !== "number" ? (
         "No temperature"
       ) : (
-        <Temperature temp={temp} />
+        <Temperature temp={temp} id="cityWeatherTemperature" />
       )}
     </PageTemplate>
   );

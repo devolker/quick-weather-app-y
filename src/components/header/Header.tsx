@@ -8,7 +8,7 @@ const Header = () => (
     <Link to={Paths.HOME} className={styles.link}>
       Home
     </Link>
-    <Link to={Paths.CITY_WEATHER} className={styles.link}>
+    <Link to={Paths.CITY_WEATHER} className={styles.link} id="cityWeatherPage">
       City weather
     </Link>
   </header>
