@@ -11,7 +11,9 @@ export const useCityWeather: UseCityWeather = (location: string) => {
   const temp = useSelector<StoreState, number | undefined>(
     (state) => state.cityWeather.cityWeatherData.temp
   );
+
   useEffect(() => {
+    console.log("dispatch");
     dispatch(cityWeatherGetAction(location));
   }, [location, dispatch]);
 

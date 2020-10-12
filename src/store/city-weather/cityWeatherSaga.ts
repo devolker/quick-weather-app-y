@@ -20,6 +20,7 @@ export const fetchCityWeatherData = async (location: string) => {
 export function* getCityWeather({
   payload: { location },
 }: CityWeatherGetAction) {
+  console.log("function* getCityWeather");
   try {
     const response = yield retry(3, 200, fetchCityWeatherData, location);
     if (response.status === 200) {
