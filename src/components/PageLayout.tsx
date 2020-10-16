@@ -15,8 +15,12 @@ const PageTemplate: React.FunctionComponent<Props> = ({
     <div>
       <h3>{title}</h3>
       <p>{description}</p>
-      {children ? <br /> : null}
-      {children || null}
+      {children ? (
+        <>
+          <br />
+          {children}
+        </>
+      ) : null}
     </div>
   );
 };

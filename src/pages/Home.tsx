@@ -4,7 +4,7 @@ import PageTemplate from "../components/PageLayout";
 const Home = () => {
   return (
     <div style={{ backgroundColor: "transparant" }}>
-      <PageTemplate title="Home" description="lorem" />
+      <PageTemplate title="Home" description="lorem ipsum" />
     </div>
   );
 };
