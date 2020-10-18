@@ -1,5 +1,5 @@
 import { Action } from "redux";
-import { CityWeatherData } from "../../model/cityWeather";
+import { CityWeatherData } from "model/cityWeather";
 
 export enum RequestCityWeatherActionTypes {
   REQUEST = "@@city-weather/REQUEST",

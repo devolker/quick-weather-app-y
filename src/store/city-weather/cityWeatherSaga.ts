@@ -5,7 +5,7 @@ import {
   RequestCityWeatherActionTypes,
 } from "./cityWeatherActions";
 import { retry, call, put, takeEvery, all } from "redux-saga/effects";
-import { CityWeatherData } from "../../model/cityWeather";
+import { CityWeatherData } from "model/cityWeather";
 
 const API_KEY = "ad59de4eaf25a9c7fe74060a7bfb3244";
 

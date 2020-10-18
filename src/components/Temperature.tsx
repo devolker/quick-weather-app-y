@@ -1,5 +1,5 @@
 import React from "react";
-import { kelvinToCelsius } from "../helpers/kelvinToCelsius";
+import { kelvinToCelsius } from "helpers/kelvinToCelsius";
 
 interface TemperatureProps {
   id: string;

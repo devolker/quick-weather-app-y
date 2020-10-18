@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { cityWeatherGetAction } from "../store/city-weather/cityWeatherActions";
-import { StoreState } from "../store";
+import { cityWeatherGetAction } from "store/city-weather/cityWeatherActions";
+import { StoreState } from "store";
 
 type UseCityWeather = (location: string) => [number | undefined];
 

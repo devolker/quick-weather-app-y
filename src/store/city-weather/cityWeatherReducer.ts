@@ -2,7 +2,7 @@ import {
   RequestCityWeatherActionTypes,
   CityWeatherAction,
 } from "./cityWeatherActions";
-import { CityWeatherData } from "../../model/cityWeather";
+import { CityWeatherData } from "model/cityWeather";
 
 export interface CityWeatherState {
   cityWeatherData: CityWeatherData;

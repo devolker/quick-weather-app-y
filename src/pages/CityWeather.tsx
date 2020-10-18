@@ -1,8 +1,8 @@
 import React from "react";
-import { Now } from "../components/Now";
-import { useCityWeather } from "../hooks/useCityWeather";
-import Temperature from "../components/Temperature";
-import PageTemplate from "../components/PageLayout";
+import { Now } from "components/Now";
+import { useCityWeather } from "hooks/useCityWeather";
+import Temperature from "components/Temperature";
+import PageTemplate from "components/PageLayout";
 
 const CityWeather = () => {
   const [temp] = useCityWeather("Delft");
