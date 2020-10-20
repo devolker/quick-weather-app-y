@@ -7,11 +7,10 @@ import {
 import { retry, call, put, takeEvery, all } from "redux-saga/effects";
 import { CityWeatherData } from "model/cityWeather";
 
-const API_KEY = "ad59de4eaf25a9c7fe74060a7bfb3244";
-
 export const fetchCityWeatherData = async (location: string) => {
+  const openWeatherApiKey = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${openWeatherApiKey}`
   );
   return response;
 };
