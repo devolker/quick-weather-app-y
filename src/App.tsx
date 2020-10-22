@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import CityWeather from "./pages/CityWeather";
 import { Paths } from "./constants/routes";
 import Header from "./components/header/Header";
+import CityAirQuality from "pages/CityAirQuality";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path={Paths.CITY_WEATHER}>
             <CityWeather />
+          </Route>
+          <Route path={Paths.AIR_QUALITY}>
+            <CityAirQuality />
           </Route>
         </Switch>
       </Router>

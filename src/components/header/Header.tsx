@@ -11,6 +11,9 @@ const Header = () => (
     <Link to={Paths.CITY_WEATHER} className={styles.link} id="cityWeatherPage">
       City weather
     </Link>
+    <Link to={Paths.AIR_QUALITY} className={styles.link} id="airQualityPage">
+      Air quality
+    </Link>
   </header>
 );
 
