@@ -13,11 +13,7 @@ const CityWeather = () => {
     >
       <Now id="nowDate" />
       <br />
-      {typeof temp !== "number" ? (
-        "No temperature"
-      ) : (
-        <Temperature temp={temp} id="cityWeatherTemperature" />
-      )}
+      {temp && <Temperature temp={temp} id="cityWeatherTemperature" />}
     </PageLayoutFullWidth>
   );
 };
