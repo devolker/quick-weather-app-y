@@ -1,10 +1,10 @@
 import React from "react";
-import PageTemplate from "components/PageLayout";
+import PageLayoutFullWidth from "components/PageLayoutFullWidth";
 
 const Home = () => {
   return (
     <div style={{ backgroundColor: "transparant" }}>
-      <PageTemplate title="Home" description="lorem ipsum" />
+      <PageLayoutFullWidth title="Home" description="lorem ipsum" />
     </div>
   );
 };

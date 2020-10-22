@@ -2,12 +2,12 @@ import React from "react";
 import { Now } from "components/Now";
 import { useCityWeather } from "hooks/useCityWeather";
 import Temperature from "components/Temperature";
-import PageTemplate from "components/PageLayout";
+import PageLayoutFullWidth from "components/PageLayoutFullWidth";
 
 const CityWeather = () => {
   const [temp] = useCityWeather("Delft");
   return (
-    <PageTemplate
+    <PageLayoutFullWidth
       title="Delft weather"
       description="Shows time and temperature"
     >
@@ -18,7 +18,7 @@ const CityWeather = () => {
       ) : (
         <Temperature temp={temp} id="cityWeatherTemperature" />
       )}
-    </PageTemplate>
+    </PageLayoutFullWidth>
   );
 };
 

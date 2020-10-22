@@ -6,7 +6,7 @@ interface Props {
   children?: React.ReactNode;
 }
 
-const PageTemplate: React.FunctionComponent<Props> = ({
+const PageLayoutFullWidth: React.FunctionComponent<Props> = ({
   title,
   description,
   children,
@@ -15,14 +15,9 @@ const PageTemplate: React.FunctionComponent<Props> = ({
     <div>
       <h3>{title}</h3>
       <p>{description}</p>
-      {children ? (
-        <>
-          <br />
-          {children}
-        </>
-      ) : null}
+      {children && children}
     </div>
   );
 };
 
-export default PageTemplate;
+export default PageLayoutFullWidth;
