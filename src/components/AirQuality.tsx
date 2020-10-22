@@ -7,7 +7,7 @@ const AirQuality: React.FunctionComponent<Props> = () => {
   const latitude = 52.011578;
   const longitude = 4.357068;
   const airQuality = useFetch(
-    `https://api.breezometer.com/air-quality/v2/current-conditions?lat=${latitude}&lon=${longitude}&key=${airQualityApiKey}&features={Features_List}`
+    `https://api.breezometer.com/air-quality/v2/current-conditions?lat=${latitude}&lon=${longitude}&key=${airQualityApiKey}`
   );
 
   console.log(airQuality);
