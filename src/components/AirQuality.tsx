@@ -14,7 +14,7 @@ const AirQuality: React.FunctionComponent<Props> = () => {
   if (loading) {
     return <span>Loading...</span>;
   } else if (error) {
-    return <span>{error}</span>;
+    return <span>Error: {error}</span>;
   }
 
   return <span>{response ? response.data?.indexes?.baqi.aqi : null}</span>;
