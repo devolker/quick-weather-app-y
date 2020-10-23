@@ -17,5 +17,4 @@ export interface CityAirQualityData {
     health_recommendations: HealthRecommendations;
   };
   error: string | null;
-  metadata: any;
 }
