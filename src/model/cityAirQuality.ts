@@ -1,3 +1,5 @@
+type HealthRecommendations = { [key: number]: string };
+
 export interface CityAirQualityData {
   data: {
     datetime: string;
@@ -12,6 +14,7 @@ export interface CityAirQualityData {
         dominant_pollutant: string;
       };
     };
+    health_recommendations: HealthRecommendations;
   };
   error: string | null;
   metadata: any;
