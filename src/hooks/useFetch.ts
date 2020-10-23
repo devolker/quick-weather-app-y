@@ -1,8 +1,7 @@
-import { CityAirQualityData } from "model/cityAirQuality";
 import { useState, useEffect } from "react";
 
-export const useFetch = (url: string, options?: RequestInit) => {
-  const [response, setResponse] = useState<CityAirQualityData | null>(null);
+export function useFetch<D>(url: string, options?: RequestInit) {
+  const [response, setResponse] = useState<D | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -22,4 +21,4 @@ export const useFetch = (url: string, options?: RequestInit) => {
     fetchData();
   }, [url, options]);
   return { response, error, loading };
-};
+}
