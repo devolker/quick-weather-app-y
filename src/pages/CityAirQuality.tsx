@@ -1,5 +1,5 @@
 import AirQuality from "components/air-quality/AirQuality";
-import PageLayoutFullWidth from "components/PageLayoutFullWidth";
+import PageLayoutFullWidth from "components/page-templates/PageLayoutFullWidth";
 import React from "react";
 
 const CityAirQuality = () => {

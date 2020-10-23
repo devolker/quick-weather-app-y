@@ -1,5 +1,5 @@
+import PageLayoutFullWidth from "components/page-templates/PageLayoutFullWidth";
 import React from "react";
-import PageLayoutFullWidth from "components/PageLayoutFullWidth";
 
 const Home = () => {
   return (

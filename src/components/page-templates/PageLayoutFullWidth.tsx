@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./PageLayoutFullWidth.module.scss";
 
 interface Props {
   title: string;
@@ -12,7 +13,7 @@ const PageLayoutFullWidth: React.FunctionComponent<Props> = ({
   children,
 }) => {
   return (
-    <div>
+    <div className={styles.root}>
       <h3>{title}</h3>
       <p>{description}</p>
       {children && children}

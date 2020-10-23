@@ -17,7 +17,6 @@ const AirQuality: React.FunctionComponent<Props> = () => {
   const handleSelectOptionClick = useCallback(
     (event: React.ChangeEvent<HTMLSelectElement>) => {
       const value = event.currentTarget.value;
-      console.log(value);
       setSelectedOption(value);
     },
     []
@@ -35,7 +34,7 @@ const AirQuality: React.FunctionComponent<Props> = () => {
       {healthRecommendations && healthRecommendations.length && (
         <>
           <label htmlFor={`healthRecommendations`}>
-            Choose air quality filter
+            Choose health reccomendation
           </label>
           <select
             name={`healthRecommendations`}
