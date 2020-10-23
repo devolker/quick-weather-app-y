@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+.root {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 8px;
+}
+
+.error {
+    color: $error-color;
+}
