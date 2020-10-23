@@ -1,4 +1,4 @@
-import AirQuality from "components/AirQuality";
+import AirQuality from "components/air-quality/AirQuality";
 import PageLayoutFullWidth from "components/PageLayoutFullWidth";
 import React from "react";
 
