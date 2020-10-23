@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter } from "helpers/capilatize";
+import { capitalizeFirstLetter } from "helpers/capilatizeFirstLetter";
 import React from "react";
 import styles from "./AirQuality.module.scss";
 import useAirQuality from "./useAirQuality";
