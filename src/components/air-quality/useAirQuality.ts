@@ -11,12 +11,9 @@ const useAirQuality = () => {
 
   const healthRecommendations =
     response &&
-    Object.keys(
-      response.data.health_recommendations
-    ).map((health_recommendation, index) => [
-      health_recommendation,
-      response.data.health_recommendations[index],
-    ]);
+    Object.entries(response.data.health_recommendations).map(
+      (health_recommendation) => health_recommendation
+    );
 
   const airQualityValue = response?.data.indexes.baqi.aqi;
 
