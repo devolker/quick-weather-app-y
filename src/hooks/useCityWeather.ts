@@ -7,7 +7,7 @@ type UseCityWeather = (
   location: string
 ) => [string | undefined, number | undefined];
 
-export const useCityWeather: UseCityWeather = (location: string) => {
+export const useCityWeather: UseCityWeather = (location) => {
   const dispatch = useDispatch();
 
   const temp = useSelector<StoreState, number | undefined>(

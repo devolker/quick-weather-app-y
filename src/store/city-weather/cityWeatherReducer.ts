@@ -26,7 +26,6 @@ export const cityWeatherReducer = (
           icon: action.payload.data.weather[0].icon,
         },
       };
-    // return { ...state, cityWeatherData: action.payload.data };
     case RequestCityWeatherActionTypes.REQUEST_FAILED:
       return { ...state };
     case RequestCityWeatherActionTypes.CLEAR:
