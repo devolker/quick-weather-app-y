@@ -7,6 +7,7 @@ import { useMemo } from "react";
 
 type UseAirQuality = () => {
   airQualityValue: number | undefined;
+  airQualityColor: string | undefined;
   error: string | null;
   loading: boolean;
   healthRecommendations: HealthRecommendations;
@@ -35,8 +36,13 @@ const useAirQuality: UseAirQuality = () => {
     response,
   ]);
 
+  const airQualityColor = useMemo(() => response?.data.indexes.baqi.color, [
+    response,
+  ]);
+
   return {
     airQualityValue,
+    airQualityColor,
     error,
     loading,
     healthRecommendations,

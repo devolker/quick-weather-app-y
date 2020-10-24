@@ -9,6 +9,7 @@ const AirQuality: React.FunctionComponent<Props> = () => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const {
     airQualityValue,
+    airQualityColor,
     error,
     loading,
     healthRecommendations,
@@ -40,7 +41,10 @@ const AirQuality: React.FunctionComponent<Props> = () => {
 
   return (
     <div className={styles.root}>
-      <p>Air quality: {airQualityValue}</p>
+      <p>
+        Air quality:{" "}
+        <span style={{ color: airQualityColor }}>{airQualityValue}</span>
+      </p>
       {healthRecommendations && healthRecommendations.length && (
         <>
           <label htmlFor={`healthRecommendations`}>
