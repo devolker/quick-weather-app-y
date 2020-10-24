@@ -1,15 +1,14 @@
 import {
-  RequestCityWeatherActionTypes,
   CityWeatherAction,
+  RequestCityWeatherActionTypes,
 } from "./cityWeatherActions";
-import { CityWeatherData } from "model/cityWeather";
 
 export interface CityWeatherState {
-  cityWeatherData: CityWeatherData;
+  cityWeatherData: { temp?: number; icon?: string };
 }
 
 const initialState: CityWeatherState = {
-  cityWeatherData: { main: { temp: undefined } },
+  cityWeatherData: { temp: undefined, icon: undefined },
 };
 
 export const cityWeatherReducer = (
@@ -20,7 +19,14 @@ export const cityWeatherReducer = (
     case RequestCityWeatherActionTypes.REQUEST:
       return { ...state };
     case RequestCityWeatherActionTypes.REQUEST_SUCCEEDED:
-      return { ...state, cityWeatherData: action.payload.data };
+      return {
+        ...state,
+        cityWeatherData: {
+          temp: action.payload.data.main.temp,
+          icon: action.payload.data.weather[0].icon,
+        },
+      };
+    // return { ...state, cityWeatherData: action.payload.data };
     case RequestCityWeatherActionTypes.REQUEST_FAILED:
       return { ...state };
     case RequestCityWeatherActionTypes.CLEAR:
