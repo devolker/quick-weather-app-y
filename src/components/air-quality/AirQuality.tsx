@@ -1,5 +1,5 @@
 import { capitalizeFirstLetter } from "helpers/capilatizeFirstLetter";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./AirQuality.module.scss";
 import useAirQuality from "./useAirQuality";
 
@@ -17,10 +17,21 @@ const AirQuality: React.FunctionComponent<Props> = () => {
   const handleSelectOptionClick = useCallback(
     (event: React.ChangeEvent<HTMLSelectElement>) => {
       const value = event.currentTarget.value;
+      console.log(value);
       setSelectedOption(value);
     },
     []
   );
+
+  useEffect(() => {
+    if (
+      healthRecommendations &&
+      healthRecommendations[0] &&
+      selectedOption === null
+    ) {
+      setSelectedOption(healthRecommendations[0]?.value);
+    }
+  }, [healthRecommendations, selectedOption]);
 
   if (loading) {
     return <span>Loading...</span>;
@@ -41,16 +52,18 @@ const AirQuality: React.FunctionComponent<Props> = () => {
             id={`healthRecommendations`}
             onChange={handleSelectOptionClick}
           >
-            {healthRecommendations.map((healthRecommendation, index) => (
-              <option
-                key={healthRecommendation[0] + String(index)}
-                value={healthRecommendation[1]}
-              >
-                {capitalizeFirstLetter(
-                  healthRecommendation[0].toString().replace("_", " ")
-                )}
-              </option>
-            ))}
+            {healthRecommendations.map((healthRecommendation, index) => {
+              return (
+                <option
+                  key={healthRecommendation.key + String(index)}
+                  value={healthRecommendation.value}
+                >
+                  {capitalizeFirstLetter(
+                    healthRecommendation.key.replace("_", " ")
+                  )}
+                </option>
+              );
+            })}
           </select>
           <p>{selectedOption && selectedOption}</p>
         </>

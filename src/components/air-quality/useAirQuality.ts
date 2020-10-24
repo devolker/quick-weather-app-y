@@ -1,5 +1,6 @@
 import { useFetch } from "hooks/useFetch";
 import { CityAirQualityData } from "model/cityAirQuality";
+import { useMemo } from "react";
 
 const useAirQuality = () => {
   const airQualityApiKey = process.env.REACT_APP_AIR_QUALITY_API_KEY;
@@ -12,12 +13,30 @@ const useAirQuality = () => {
   const healthRecommendations =
     response &&
     Object.entries(response.data.health_recommendations).map(
-      (health_recommendation) => health_recommendation
+      (health_recommendation) => {
+        let keyValueHealthRecommendation;
+        try {
+          keyValueHealthRecommendation = {
+            key: health_recommendation[0],
+            value: health_recommendation[1],
+          };
+          return keyValueHealthRecommendation;
+        } catch {
+          return { key: "error_value", value: "Unvalid value" };
+        }
+      }
     );
 
-  const airQualityValue = response?.data.indexes.baqi.aqi;
+  const airQualityValue = useMemo(() => response?.data.indexes.baqi.aqi, [
+    response,
+  ]);
 
-  return { airQualityValue, error, loading, healthRecommendations };
+  return {
+    airQualityValue,
+    error,
+    loading,
+    healthRecommendations,
+  };
 };
 
 export default useAirQuality;
