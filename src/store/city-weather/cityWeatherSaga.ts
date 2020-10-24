@@ -40,5 +40,5 @@ export function* cityWeatherSagas() {
 }
 
 const parseJsonResponse = (response: {
-  json: () => Promise<any>;
-}): Promise<any> => response.json();
+  json: () => Promise<Response>;
+}): Promise<Response> => response.json();

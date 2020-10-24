@@ -1,8 +1,18 @@
 import { useFetch } from "hooks/useFetch";
-import { CityAirQualityData } from "model/cityAirQuality";
+import {
+  CityAirQualityData,
+  HealthRecommendations,
+} from "model/cityAirQuality";
 import { useMemo } from "react";
 
-const useAirQuality = () => {
+type UseAirQuality = () => {
+  airQualityValue: number | undefined;
+  error: string | null;
+  loading: boolean;
+  healthRecommendations: HealthRecommendations;
+};
+
+const useAirQuality: UseAirQuality = () => {
   const airQualityApiKey = process.env.REACT_APP_AIR_QUALITY_API_KEY;
   const latitude = 52.011578;
   const longitude = 4.357068;
@@ -10,20 +20,14 @@ const useAirQuality = () => {
     `https://api.breezometer.com/air-quality/v2/current-conditions?lat=${latitude}&lon=${longitude}&key=${airQualityApiKey}&features=breezometer_aqi,health_recommendations`
   );
 
-  const healthRecommendations =
+  const healthRecommendations: HealthRecommendations =
     response &&
     Object.entries(response.data.health_recommendations).map(
       (health_recommendation) => {
-        let keyValueHealthRecommendation;
-        try {
-          keyValueHealthRecommendation = {
-            key: health_recommendation[0],
-            value: health_recommendation[1],
-          };
-          return keyValueHealthRecommendation;
-        } catch {
-          return null;
-        }
+        return {
+          key: health_recommendation[0],
+          value: health_recommendation[1],
+        };
       }
     );
 

@@ -16,3 +16,10 @@ export interface CityAirQualityData {
   };
   error: string | null;
 }
+
+export type HealthRecommendations =
+  | {
+      key: string;
+      value: string;
+    }[]
+  | null;

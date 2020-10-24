@@ -17,7 +17,6 @@ const AirQuality: React.FunctionComponent<Props> = () => {
   const handleSelectOptionClick = useCallback(
     (event: React.ChangeEvent<HTMLSelectElement>) => {
       const value = event.currentTarget.value;
-      console.log(value);
       setSelectedOption(value);
     },
     []
@@ -65,6 +64,7 @@ const AirQuality: React.FunctionComponent<Props> = () => {
                   </option>
                 );
               }
+              return null;
             })}
           </select>
           <p>{selectedOption && selectedOption}</p>
