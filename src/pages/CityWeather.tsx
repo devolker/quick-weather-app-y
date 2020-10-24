@@ -1,9 +1,9 @@
-import React from "react";
 import { Now } from "components/Now";
-import { useCityWeather } from "hooks/useCityWeather";
-import Temperature from "components/Temperature";
 import PageLayoutFullWidth from "components/page-templates/PageLayoutFullWidth";
+import Temperature from "components/Temperature";
 import WeatherIcon from "components/weather-icon/WeatherIcon";
+import { useCityWeather } from "hooks/useCityWeather";
+import React from "react";
 
 const CityWeather = () => {
   const [icon, temp] = useCityWeather("Delft");
