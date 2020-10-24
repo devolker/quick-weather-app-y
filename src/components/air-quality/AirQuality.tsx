@@ -47,12 +47,12 @@ const AirQuality: React.FunctionComponent<Props> = () => {
       </p>
       {healthRecommendations && healthRecommendations.length && (
         <>
-          <label htmlFor={`healthRecommendations`}>
+          <label htmlFor="healthRecommendations">
             Choose health reccomendation
           </label>
           <select
-            name={`healthRecommendations`}
-            id={`healthRecommendations`}
+            name="healthRecommendations"
+            id="healthRecommendations"
             onChange={handleSelectOptionClick}
           >
             {healthRecommendations.map((healthRecommendation, index) => {
