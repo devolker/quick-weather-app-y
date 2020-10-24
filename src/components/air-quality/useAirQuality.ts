@@ -22,7 +22,7 @@ const useAirQuality = () => {
           };
           return keyValueHealthRecommendation;
         } catch {
-          return { key: "error_value", value: "Unvalid value" };
+          return null;
         }
       }
     );

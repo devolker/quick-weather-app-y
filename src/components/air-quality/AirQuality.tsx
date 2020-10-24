@@ -53,16 +53,18 @@ const AirQuality: React.FunctionComponent<Props> = () => {
             onChange={handleSelectOptionClick}
           >
             {healthRecommendations.map((healthRecommendation, index) => {
-              return (
-                <option
-                  key={healthRecommendation.key + String(index)}
-                  value={healthRecommendation.value}
-                >
-                  {capitalizeFirstLetter(
-                    healthRecommendation.key.replace("_", " ")
-                  )}
-                </option>
-              );
+              if (healthRecommendation) {
+                return (
+                  <option
+                    key={healthRecommendation.key + String(index)}
+                    value={healthRecommendation.value}
+                  >
+                    {capitalizeFirstLetter(
+                      healthRecommendation.key.replace("_", " ")
+                    )}
+                  </option>
+                );
+              }
             })}
           </select>
           <p>{selectedOption && selectedOption}</p>
