@@ -5,7 +5,7 @@ import React from "react";
 
 const CityAirQuality = () => {
   return (
-    <PageLayout backgroundColor="#62b2cb">
+    <PageLayout>
       <PageHeader title="Air Quality" description="lorem ipsum" />
       <AirQuality />
     </PageLayout>

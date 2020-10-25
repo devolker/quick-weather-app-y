@@ -9,7 +9,7 @@ import React from "react";
 const CityWeather = () => {
   const [icon, temp] = useCityWeather("Delft");
   return (
-    <PageLayout backgroundColor="#2f96b2">
+    <PageLayout backgroundColor="#2f96b2" textColor="#ffffff">
       <PageHeader title="City Weather" description="lorem ipsum" />
       <Now id="nowDate" />
       <br />
