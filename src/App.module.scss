@@ -1,19 +1,6 @@
 .root {
   text-align: center;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
