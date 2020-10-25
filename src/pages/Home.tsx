@@ -1,14 +1,12 @@
-import PageLayoutFullWidth from "components/page-templates/PageLayoutFullWidth";
+import PageLayout from "components/page-templates/PageLayout";
 import PageHeader from "components/PageHeader";
 import React from "react";
 
 const Home = () => {
   return (
-    <div style={{ backgroundColor: "transparant" }}>
-      <PageLayoutFullWidth>
-        <PageHeader title="Home" description="lorem ipsum" />
-      </PageLayoutFullWidth>
-    </div>
+    <PageLayout>
+      <PageHeader title="Home" description="lorem ipsum" />
+    </PageLayout>
   );
 };
 

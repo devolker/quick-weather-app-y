@@ -1,16 +1,14 @@
 import AirQuality from "components/air-quality/AirQuality";
-import PageLayoutFullWidth from "components/page-templates/PageLayoutFullWidth";
+import PageLayout from "components/page-templates/PageLayout";
 import PageHeader from "components/PageHeader";
 import React from "react";
 
 const CityAirQuality = () => {
   return (
-    <div style={{ backgroundColor: "transparant" }}>
-      <PageLayoutFullWidth>
-        <PageHeader title="Air Polution" description="lorem ipsum" />
-        <AirQuality />
-      </PageLayoutFullWidth>
-    </div>
+    <PageLayout backgroundColor="#62b2cb">
+      <PageHeader title="Air Quality" description="lorem ipsum" />
+      <AirQuality />
+    </PageLayout>
   );
 };
 
